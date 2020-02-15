@@ -6,27 +6,23 @@
 
 为了缓解z3的发热问题，将原12v的运放供电降低至可接受的范围。分析电路可知电路中有两片SDB628负责供电，其中靠近USB接口的SDB628给运放OP275与LM4562供电，决定电压的两个电阻分别为：
 
-![](https://latex.codecogs.com/gif.latex?R_{1}=100k\Omega, R_{2}=4.7k\Omega)
+![](https://latex.codecogs.com/gif.latex?R_{1}=100k\Omega%20R_{2}=4.7k\Omega)
 
 根据芯片手册计算：
 
-![](https://latex.codecogs.com/gif.latex?V_{out}=V_{ref}\times(1+R_{1}\div R_{2})=0.6V\times(1+100k\Omega\div4.7k\Omega)\approx13.3660V)
+![](https://latex.codecogs.com/gif.latex?V_{out}=V_{ref}\times(1+R_{1}\div%20R_{2})=0.6V\times(1+100k\Omega\div4.7k\Omega)\approx13.3660V)
 
-![](https://latex.codecogs.com/gif.latex?
-\frac{R_{1}}{R_{2}} =\frac{Vout}{0.6V} -1)
+![](https://latex.codecogs.com/gif.latex?\frac{R_{1}}{R_{2}}=\frac{Vout}{0.6V}-1)
 
 查询手册可知OP275运放最低工作电压为4.5v，设降压后电压为6.5v，计算R1与R2比值
 
-![](https://latex.codecogs.com/gif.latex?
-\frac{R_{1}'}{R_{2}'} =\frac{Vout'}{0.6V} -1=\frac{6.5V}{0.6V} -1\approx9.83)
+![](https://latex.codecogs.com/gif.latex?\frac{R_{1}'}{R_{2}'}=\frac{Vout'}{0.6V}-1=\frac{6.5V}{0.6V}-1\approx9.83)
 
 取比值为10，设：
 
-![](https://latex.codecogs.com/gif.latex?
-R_{1}''=10k\Omega, R_{2}''=1k\Omega)
+![](https://latex.codecogs.com/gif.latex?R_{1}''=10k\Omega,%20R_{2}''=1k\Omega)
 
-![](https://latex.codecogs.com/gif.latex?
-V_{out}''=0.6V\times(1+10k\Omega\div1k\Omega)=6.6V)
+![](https://latex.codecogs.com/gif.latex?_{out}''=0.6V\times(1+10k\Omega\div1k\Omega)=6.6V)
 
 输出电压满足预期。
 
